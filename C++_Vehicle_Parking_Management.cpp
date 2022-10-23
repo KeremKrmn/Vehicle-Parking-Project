@@ -29,10 +29,10 @@ int HowmanyHours;
 //With this function, we choose our vehicle.
 void WhichVehicle() {
 
-	cout << "Press 1 to park Motorcycle\t\t" <<"The hourly price of the Motorcycle is: "<<priceMtrcycle <<"$" << endl;
-	cout << "Press 2 to park Car\t\t\t" << "The hourly price of the Car is: " << priceCar << "$" << endl;
-	cout << "Press 3 to park Buss\t\t\t" << "The hourly price of the Buss is: " << priceBus << "$" << endl;
-	cout << "Press 4 to park Truck\t\t\t" << "The hourly price of the Truck is: " << priceTruck << "$" << endl;
+	cout << "Press 1 to park Motorcycle\t\t" <<"The hourly price of the Motorcycle is: " << "$" <<priceMtrcycle << endl;
+	cout << "Press 2 to park Car\t\t\t" << "The hourly price of the Car is: " << "$" << priceCar << endl;
+	cout << "Press 3 to park Buss\t\t\t" << "The hourly price of the Buss is: " << "$" << priceBus  << endl;
+	cout << "Press 4 to park Truck\t\t\t" << "The hourly price of the Truck is: " << "$" << priceTruck  << endl;
 	cout << "Press 5 to look values" << endl;
 	cout << "Press 6 to delete all values" << endl;
 	cout << "\n";
@@ -42,11 +42,11 @@ void WhichVehicle() {
 //We show you how many cars are parked and how much they cost in total.
 void ShowAll() {
 
-	cout << "Total number of Motorcycles: " << totalMtrcycle << "\t" << "Total price is: " << TotalpriceMtrcycle << endl;
-	cout << "Total number of Cars: " << totalCar << " \t" << "Total price is: " << TotalpriceCar << endl;
-	cout << "Total number of Buses: " << totalBus << "\t" << "Total price is: " << TotalpriceBus << endl;
-	cout << "Total number of Trucks: " << totalTruck << "\t" << "Total price is: " << TotalpriceTruck << endl;
-	cout << "Total number of Vehicles: " << totalVehicle << "\t" << "Sum of all prices is: " << sumofAllprices << endl;
+	cout << "Total number of Motorcycles: " << totalMtrcycle << "\t" << "Total price is: " << "$" << TotalpriceMtrcycle << endl;
+	cout << "Total number of Cars: " << totalCar << " \t" << "Total price is: " << "$" << TotalpriceCar << endl;
+	cout << "Total number of Buses: " << totalBus << "\t" << "Total price is: " << "$" << TotalpriceBus << endl;
+	cout << "Total number of Trucks: " << totalTruck << "\t" << "Total price is: " << "$" << TotalpriceTruck << endl;
+	cout << "Total number of Vehicles: " << totalVehicle << "\t" << "Sum of all prices is: " << "$" << sumofAllprices << endl;
 	cout << "************************************************************* \n" << endl;
 
 }
