@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <map>
 #include <string>
@@ -42,8 +41,8 @@ map<string, int> BusPNumber;
 
 
 //With this function, we choose our vehicle.
-void WhichVehicle() {
-
+void WhichVehicle()
+{
 	cout << "Press 1 to park Motorcycle\t\t" << "The hourly price of the Motorcycle is: " << "$" << priceMtrcycle << endl;
 	cout << "Press 2 to park Car\t\t\t" << "The hourly price of the Car is: " << "$" << priceCar << endl;
 	cout << "Press 3 to park Buss\t\t\t" << "The hourly price of the Buss is: " << "$" << priceBus << endl;
@@ -56,8 +55,8 @@ void WhichVehicle() {
 }
 
 //We show you how many cars are parked and how much they cost in total.
-void ShowAll() {
-
+void ShowAll()
+{
 	cout << "Total number of Motorcycles: " << totalMtrcycle << "\t" << "Total price is: " << "$" << TotalpriceMtrcycle << endl;
 	cout << "Total number of Cars: " << totalCar << " \t" << "Total price is: " << "$" << TotalpriceCar << endl;
 	cout << "Total number of Buses: " << totalBus << "\t" << "Total price is: " << "$" << TotalpriceBus << endl;
@@ -68,8 +67,8 @@ void ShowAll() {
 }
 
 //With this function we delete all values.
-void DeleteAll() {
-
+void DeleteAll()
+{
 	totalMtrcycle = 0;
 	totalCar = 0;
 	totalBus = 0;
@@ -89,9 +88,11 @@ void DeleteAll() {
 
 
 //With this function we will prevent the user from entering any string.
-void HowManyHours() {
+void HowManyHours()
+{
 
-	while (true) {
+	while (true)
+	{
 		cout << "How many hours do you want tou park?\nPlease enter: ";
 		cin >> HowmanyHours;
 		cout << "\n";
@@ -104,25 +105,27 @@ void HowManyHours() {
 			continue;
 		}
 
-		else if (HowmanyHours <= 0) {
+		else if (HowmanyHours <= 0)
+		{
 			cout << "!!!Please enter positive number!!!\n" << endl;
 			continue;
 		}
 
-		else {
+		else
+		{
 			break;
 		}
 	}
 }
 
-void MotorcyclePlateNumbersToHMHours() {
-
-
+//This function is used to store motorcycle plate numbers.
+void MotorcyclePlateNumbersToHMHours()
+{
 	cout << "Please enter your plate number: ";
 	cin >> MtrcyclePlateNumber;
 
-
-	for (int i = 0; i < MtrcyclePlateNumber.length(); i++) {
+	for (int i = 0; i < MtrcyclePlateNumber.length(); i++)
+	{
 		MtrcyclePlateNumber[i] = toupper(MtrcyclePlateNumber[i]);
 	}
 
@@ -130,39 +133,43 @@ void MotorcyclePlateNumbersToHMHours() {
 
 	MtrcyclePNumber.insert({ MtrcyclePlateNumber, HowmanyHours });
 
-	while (true) {
-
+	while (true)
+	{
 		cout << "Want to see all Car licence plate numbers ? (Y / N) : ";
 		cin >> YeyorNay;
 		cout << endl;
 
-		if (YeyorNay == 'Y' || YeyorNay == 'y') {
+		if (YeyorNay == 'Y' || YeyorNay == 'y')
+		{
 
-			for (auto element : MtrcyclePNumber) {
+			for (auto element : MtrcyclePNumber)
+			{
 				cout << "Motorcycle Plate Number is: " << element.first << " ---> " << element.second << "hours." << endl;
 			}
 
 			cout << endl;
 			break;
 		}
-		else if (YeyorNay == 'N' || YeyorNay == 'n') {
+		else if (YeyorNay == 'N' || YeyorNay == 'n')
+		{
 			break;
 		}
-		else {
+		else
+		{
 			cout << "!!Try again!!" << endl;
 		}
-
 
 	}
 }
 
-void CarPlateNumbersToHMHours() {
-
-
+//This function is used to store car plate numbers.
+void CarPlateNumbersToHMHours()
+{
 	cout << "Please enter your plate number: ";
 	cin >> CarPlateNumber;
 
-	for (int i = 0; i < CarPlateNumber.length(); i++) {
+	for (int i = 0; i < CarPlateNumber.length(); i++)
+	{
 		CarPlateNumber[i] = toupper(CarPlateNumber[i]);
 	}
 
@@ -170,38 +177,42 @@ void CarPlateNumbersToHMHours() {
 
 	CarPNumber.insert({ CarPlateNumber, HowmanyHours });
 
-	while (true) {
-
+	while (true)
+	{
 		cout << "Want to see all Car licence plate numbers ? (Y / N) : ";
 		cin >> YeyorNay;
 		cout << endl;
 
-		if (YeyorNay == 'Y' || YeyorNay == 'y') {
+		if (YeyorNay == 'Y' || YeyorNay == 'y')
+		{
 
-			for (auto element : CarPNumber) {
+			for (auto element : CarPNumber)
+			{
 				cout << "Car Plate Number is: " << element.first << " ---> " << element.second << " hours." << endl;
 			}
 			cout << endl;
 			break;
 		}
-		else if (YeyorNay == 'N' || YeyorNay == 'n') {
+		else if (YeyorNay == 'N' || YeyorNay == 'n')
+		{
 			break;
 		}
-		else {
+		else
+		{
 			cout << "!!Try again!!" << endl;
 		}
 
 	}
 }
 
-void BusPlateNumbersToHMHours() {
-
-
-
+//This function is used to store bus plate numbers.
+void BusPlateNumbersToHMHours()
+{
 	cout << "Please enter your plate number: ";
 	cin >> BusPlateNumber;
 
-	for (int i = 0; i < BusPlateNumber.length(); i++) {
+	for (int i = 0; i < BusPlateNumber.length(); i++)
+	{
 		BusPlateNumber[i] = toupper(BusPlateNumber[i]);
 	}
 
@@ -210,41 +221,43 @@ void BusPlateNumbersToHMHours() {
 	BusPNumber.insert({ BusPlateNumber, HowmanyHours });
 
 
-	while (true) {
-
+	while (true)
+	{
 		cout << "Want to see all Car licence plate numbers ? (Y / N) : ";
 		cin >> YeyorNay;
 		cout << endl;
 
-		if (YeyorNay == 'Y' || YeyorNay == 'y') {
+		if (YeyorNay == 'Y' || YeyorNay == 'y')
+		{
 
-			for (auto element : BusPNumber) {
+			for (auto element : BusPNumber)
+			{
 				cout << "Bus Plate Number is: " << element.first << " ---> " << element.second << " hours." << endl;
 			}
 			cout << endl;
 			break;
 		}
-		else if (YeyorNay == 'N' || YeyorNay == 'n') {
+		else if (YeyorNay == 'N' || YeyorNay == 'n')
+		{
 			break;
 		}
-		else {
+		else
+		{
 			cout << "!!Try again!!" << endl;
 		}
 
 	}
 
-
-
 }
 
-void TruckPlateNumbersToHMHours() {
-
-
-
+//This function is used to store truck plate numbers.
+void TruckPlateNumbersToHMHours()
+{
 	cout << "Please enter your plate number: ";
 	cin >> TruckPlateNumber;
 
-	for (int i = 0; i < TruckPlateNumber.length(); i++) {
+	for (int i = 0; i < TruckPlateNumber.length(); i++)
+	{
 		TruckPlateNumber[i] = toupper(TruckPlateNumber[i]);
 	}
 
@@ -252,42 +265,45 @@ void TruckPlateNumbersToHMHours() {
 
 	TruckPNumber.insert({ TruckPlateNumber, HowmanyHours });
 
-	while (true) {
+	while (true)
+	{
 
 		cout << "Want to see all Car licence plate numbers ? (Y / N) : ";
 		cin >> YeyorNay;
 		cout << endl;
 
-		if (YeyorNay == 'Y' || YeyorNay == 'y') {
+		if (YeyorNay == 'Y' || YeyorNay == 'y')
+		{
 
-			for (auto element : TruckPNumber) {
+			for (auto element : TruckPNumber)
+			{
 				cout << "Truck Plate Number is: " << element.first << " ---> " << element.second << " hours." << endl;
 			}
 			cout << endl;
 			break;
 		}
-		else if (YeyorNay == 'N' || YeyorNay == 'n') {
+		else if (YeyorNay == 'N' || YeyorNay == 'n')
+		{
 			break;
 		}
-		else {
+		else
+		{
 			cout << "!!Try again!!" << endl;
 		}
 
 	}
 
-
-
 }
 
-int main() {
+int main()
+{
 
 	cout << "\t\t\t Total capacity is " << totalcapacity << " vehicles.\n";
 
-	while (totalVehicle < totalcapacity) {
-
+	while (totalVehicle < totalcapacity)
+	{
 		cout << endl;
 		WhichVehicle();
-
 
 		//show this message when user enters string 
 		while (true)
@@ -302,13 +318,14 @@ int main() {
 				cin.ignore(numeric_limits<streamsize>().max(), '\n');
 				continue;
 			}
-			else {
+			else
+			{
 				break;
 			}
 		}
 
-		switch (NumbertoEnter) {
-
+		switch (NumbertoEnter)
+		{
 		case 1:
 
 			HowManyHours();
@@ -375,11 +392,11 @@ int main() {
 
 		totalVehicle = totalMtrcycle + totalCar + totalBus + totalTruck;
 		sumofAllprices = TotalpriceMtrcycle + TotalpriceCar + TotalpriceBus + TotalpriceTruck;
+
 	}
 
 	cout << "\t\t\t!!THERE IS NO ROOM FOR ANOTHER VEHICLE!!\n" << endl;
 	ShowAll();
-
 
 	return 0;
 }
